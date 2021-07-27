@@ -90,6 +90,24 @@ header {
     background-size: cover;
 }
 
+@media only screen and (max-width:767px) {
+    .banner {
+        background-image: url(./images/banner_phone-01.jpg);
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .banner {
+        background-image: url(./images/banner_ipad-01.jpg);
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .banner {
+        background-image: url(images/banner_1.jpg);
+    }
+}
+
 
 /* 固定菜單列 */
 
@@ -100,13 +118,15 @@ header {
     width: 100%;
     height: 100px;
     display: flex;
-    background-color: #cca9a9;
+    background-color: rgba(243, 214, 214, 0.9);
+    z-index: 9999;
 }
 
 #menu-bar.sticky .logo {
     flex: 0 0 auto;
     height: 100%;
     flex-direction: row;
+    /* margin: 5px 20px 5px 10px; */
 }
 
 #menu-bar.sticky .menu {
@@ -114,6 +134,16 @@ header {
     flex: 1 0 0%;
     flex-direction: row;
     align-items: center;
+}
+
+#menu-bar.sticky .menu li {
+    margin: 5px;
+}
+
+@media only screen and (max-width:767px) {
+    #menu-bar.sticky .menu {
+        font-size: 0.7rem;
+    }
 }
 
 
@@ -728,6 +758,54 @@ figcaption {
 
 /* about.html */
 
+
+/* 固定菜單列 */
+
+#menu-bar_1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    background-color: rgba(243, 214, 214, 0.9);
+    z-index: 9999;
+}
+
+#menu-bar_1 .logo {
+    flex: 0 0 auto;
+    width: auto;
+    height: 80%;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 14px;
+}
+
+#menu-bar_1 .menu {
+    height: 100%;
+    flex: 1 0 0%;
+    flex-direction: row;
+    align-items: center;
+}
+
+#menu-bar_1 .menu li {
+    margin: 5px;
+}
+
+@media only screen and (max-width:767px) {
+    #menu-bar_1 .menu {
+        font-size: 0.7rem;
+    }
+    #menu-bar_1 .logo {
+        height: 70%;
+        margin-top: 18px;
+    }
+}
+
+#about_bg header {
+    height: 5px;
+}
+
 #about_bg {
     height: 180vh;
     width: 100%;
@@ -744,27 +822,31 @@ figcaption {
     border-bottom: solid 5px rgba(57, 54, 54, 0.1);
     padding-bottom: 15px;
     margin: 0px auto;
-    padding-top: 100px;
+    padding-top: 40px;
+    text-align: center;
 }
 
 @media only screen and (max-width:767px) {
     #about_bg h1 {
         font-size: 1.5rem;
-        width: 55%;
+        width: 70%;
         padding-bottom: 20px;
-        padding-top: 50px;
+        padding-top: 20px;
+    }
+    #about_bg {
+        height: 150vh;
     }
 }
 
 @media only screen and (min-width:768px) {
     #about_bg h1 {
-        width: 38%;
+        width: 60%;
     }
 }
 
 @media only screen and (min-width:992px) {
     #about_bg h1 {
-        width: 20%;
+        width: 60%;
     }
 }
 
@@ -775,13 +857,7 @@ figcaption {
     /* x,y */
     background-attachment: fixed;
     /* 滾輪滑動背景不動 */
-    margin-top: 100px;
-}
-
-@media only screen and (max-width:767px) {
-    #about_img {
-        margin-top: 60px;
-    }
+    margin-top: 30px;
 }
 
 #about_bg p {
@@ -867,10 +943,14 @@ figcaption {
 /* 花卉課程 */
 
 #lessons_bg {
-    height: 180vh;
+    height: 150vh;
     width: 100%;
     background-color: #F4E9E9;
     margin: 0;
+}
+
+#lessons_bg header {
+    height: 10px;
 }
 
 #lessons_bg h1 {
@@ -880,7 +960,7 @@ figcaption {
     font-weight: bolder;
     letter-spacing: .3rem;
     border-bottom: solid 5px rgba(57, 54, 54, 0.1);
-    width: 12%;
+    width: 70%;
     padding-bottom: 15px;
     text-align: center;
     margin: 0px auto;
@@ -889,23 +969,32 @@ figcaption {
 }
 
 @media only screen and (max-width:767px) {
+    #lessons_bg {
+        height: 130vh;
+    }
     #lessons_bg h1 {
         font-size: 1.5rem;
-        width: 40%;
+        width: 80%;
+        margin-bottom: 33px;
+        padding-top: 20px;
     }
 }
 
 @media only screen and (min-width:768px) {
+    #lessons_bg {
+        height: 120vh;
+    }
     #lessons_bg h1 {
         font-size: 2rem;
-        width: 20%;
+        width: 60%;
+        padding-top: 50px;
     }
 }
 
 @media only screen and (min-width:992px) {
     #lessons_bg h1 {
         font-size: 2rem;
-        width: 12%;
+        width: 70%;
     }
 }
 
@@ -1177,8 +1266,12 @@ figcaption {
 
 /* 花禮推薦 */
 
+#gift_page header {
+    height: 20px;
+}
+
 #gift_page {
-    height: 200vh;
+    height: 180vh;
     width: 100%;
     background-color: #F4E9E9;
     margin: 0;
@@ -1186,19 +1279,17 @@ figcaption {
 
 @media only screen and (max-width:767px) {
     #gift_page {
-        height: 300vh;
+        height: 180vh;
     }
 }
 
 @media only screen and (min-width:768px) {
-    #gift_page {
-        height: 260vh;
-    }
+    #gift_page {}
 }
 
 @media only screen and (min-width:992px) {
     #gift_page {
-        height: 200vh;
+        height: 150vh;
     }
 }
 
@@ -1209,52 +1300,43 @@ figcaption {
     font-weight: bolder;
     letter-spacing: .3rem;
     border-bottom: solid 5px rgba(57, 54, 54, 0.1);
-    width: 12%;
+    width: 60%;
     padding-bottom: 15px;
     text-align: center;
     margin: 0px auto;
     margin-bottom: 50px;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 @media only screen and (max-width:767px) {
     #gift_title {
         font-size: 1.5rem;
-        width: 40%;
+        width: 70%;
+        padding-top: 20px;
+        margin-bottom: 20px;
     }
 }
 
 @media only screen and (min-width:768px) {
     #gift_title {
         font-size: 2rem;
-        width: 20%;
+        width: 600%;
     }
 }
 
 @media only screen and (min-width:992px) {
     #gift_title {
         font-size: 2rem;
-        width: 12%;
+        width: 60%;
     }
 }
 
 #img_1 {
     background-image: url(./images/gift_1.jpg);
-    width: 50px;
+    width: 80%;
     height: 90vh;
     overflow: hidden;
-}
-
-@media only screen and (max-width:767px) {
-    #img_1 {}
-}
-
-@media only screen and (min-width:768px) {
-    #img_1 {}
-}
-
-@media only screen and (min-width:992px) {
-    #img_1 {}
+    margin: 0 auto;
 }
 
 .gift_text_1 {
@@ -1269,6 +1351,7 @@ figcaption {
     align-items: center;
     height: 100%;
     flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .gift_text_1:hover {
@@ -1296,6 +1379,7 @@ figcaption {
     align-items: center;
     height: 100%;
     flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .gift_text:hover {
@@ -1303,31 +1387,87 @@ figcaption {
     color: rgb(138, 85, 85);
 }
 
-#img_1 h3 {}
-
-#img_1 h2 {}
-
 #img_2 {
     background-image: url(./images/gift_2.jpg);
-    width: 48%;
-    margin: 20px 10px;
-    height: 50vh;
-    display: inline-block;
 }
 
 #img_3 {
     background-image: url(./images/gift_3.jpg);
-    width: 48%;
+}
+
+#img_2,
+#img_3 {
+    width: 40%;
     margin: 20px 10px;
     height: 50vh;
     display: inline-block;
+    /* background-position-x: center; */
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+}
+
+.img_2_3 {
+    text-align: center;
+}
+
+@media only screen and (max-width:767px) {
+    #img_1 {
+        background-position-x: center;
+        background-size: cover;
+        width: 85%;
+        height: 45vh;
+    }
+    .gift_text_1 {
+        letter-spacing: .3rem;
+    }
+    .gift_text_1 h3 {
+        font-size: 1.5rem;
+    }
+    .gift_text_1 h2 {
+        font-size: 1.8rem;
+    }
+    #img_2,
+    #img_3 {
+        margin: 20px auto;
+        width: 85%;
+        height: 45vh;
+        display: flex;
+        background-position-x: center;
+    }
+    .gift_text {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    #img_1 {
+        background-position-x: center;
+        background-size: cover;
+        width: 90%;
+        height: 53vh;
+    }
+    #img_2,
+    #img_3 {
+        width: 44%;
+        height: 36vh;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    #img_1 {}
 }
 
 
 /* COOPERATION */
 
+#cooperation_page header {
+    height: 15vh;
+}
+
 #cooperation_page {
-    height: 300vh;
+    height: 130vh;
     width: 100%;
     background-color: #F4E9E9;
     margin: 0;
@@ -1340,26 +1480,72 @@ figcaption {
     font-weight: bolder;
     letter-spacing: .3rem;
     border-bottom: solid 5px rgba(57, 54, 54, 0.1);
-    width: 12%;
+    width: 60%;
     padding-bottom: 15px;
     text-align: center;
     margin: 0px auto;
     margin-bottom: 50px;
-    padding-top: 100px;
+    padding-top: 30px;
 }
 
 .coop_img {
-    display: flex;
-    width: 20%;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
 }
 
 .coop_img img {
-    margin: 10px 35px;
+    margin: 10px 15px;
     border-radius: 80px;
+    width: 20%;
 }
 
 .coop_img img:hover {
     background-color: #fff;
+}
+
+@media only screen and (max-width:767px) {
+    #cooperation_page header {
+        height: 4vh;
+    }
+    #cooperation_page {
+        height: 100vh;
+    }
+    #coop_title {
+        width: 60%;
+        font-size: 1rem;
+        padding-top: 15px;
+        margin-bottom: 20px;
+    }
+    .coop_img img {
+        margin: 5px 8px;
+        border-radius: 20px;
+        width: 20%;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    #cooperation_page {
+        height: 100vh;
+    }
+    #cooperation_page header {
+        height: 8vh;
+    }
+    .coop_img img {
+        border-radius: 60px;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    #cooperation_page {
+        height: 130vh;
+    }
+    #cooperation_page header {
+        height: 16vh;
+    }
+    .coop_img img {
+        border-radius: 80px;
+    }
 }
 
 

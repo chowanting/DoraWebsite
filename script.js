@@ -11,7 +11,7 @@ window.onload = function() {
 };
 
 //設定捲動監聽
-window.scroll = function() {
+window.onscroll = function() {
     if (window.pageYOffset > sticky) {
         menubar.classList.add('sticky');
     } else {
