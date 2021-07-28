@@ -94,17 +94,26 @@ header {
     .banner {
         background-image: url(./images/banner_phone-01.jpg);
     }
+    #menu-bar {
+        display: none;
+    }
 }
 
 @media only screen and (min-width:768px) {
     .banner {
         background-image: url(./images/banner_ipad-01.jpg);
     }
+    #menu-bar {
+        display: none;
+    }
 }
 
 @media only screen and (min-width:992px) {
     .banner {
         background-image: url(images/banner_1.jpg);
+    }
+    #menu-bar {
+        display: block;
     }
 }
 
@@ -1551,9 +1560,129 @@ figcaption {
 
 /* CONTACT */
 
+#contact_page header {
+    height: 15vh;
+}
+
 #contact_page {
-    height: 300vh;
+    height: 100vh;
     width: 100%;
     background-color: #F4E9E9;
     margin: 0;
+}
+
+#contact_title {
+    font-family: "NotoSerifCJKtc-Bold";
+    color: #8d6565;
+    font-size: 2rem;
+    font-weight: bolder;
+    letter-spacing: .3rem;
+    border-bottom: solid 5px rgba(57, 54, 54, 0.1);
+    width: 60%;
+    padding-bottom: 15px;
+    text-align: center;
+    margin: 0px auto;
+    margin-bottom: 50px;
+    padding-top: 20px;
+}
+
+#contactform {
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+/* BUTTON */
+
+button {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 60px;
+    width: 210px;
+    opacity: 1;
+    background-color: #ffffff;
+    border: 1px solid rgba(22, 76, 167, 0.6);
+    margin: 20px auto;
+}
+
+button span {
+    color: #164ca7;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+}
+
+button:hover {
+    animation: rotate 0.7s ease-in-out both;
+}
+
+button:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes storm {
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+}
+
+@media only screen and (max-width:767px) {
+    #contact_title {
+        font-size: 1.5rem;
+        width: 70%;
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    #contact_title {
+        font-size: 2rem;
+        width: 600%;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    #contact_title {
+        font-size: 2rem;
+        width: 60%;
+    }
 }
