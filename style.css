@@ -221,14 +221,6 @@ header {
     width: 100%;
 }
 
-@media only screen and (max-width:767px) {
-    #service_box {}
-}
-
-@media only screen and (min-width:768px) {
-    #service_box {}
-}
-
 @media only screen and (min-width:992px) {
     #service_box {
         width: 100%;
@@ -305,10 +297,6 @@ header {
     }
 }
 
-@media only screen and (min-width:768px) {
-    .service_list p {}
-}
-
 @media only screen and (min-width:992px) {
     .service_list p {
         font-size: 1.2rem;
@@ -332,14 +320,6 @@ header {
         border-radius: 10px;
         padding: 0;
     }
-}
-
-@media only screen and (min-width:768px) {
-    .service_btn {}
-}
-
-@media only screen and (min-width:992px) {
-    .service_btn {}
 }
 
 .service_btn:hover {
@@ -368,14 +348,6 @@ header {
     padding-top: 20px;
     margin-top: 50px;
     width: 100%;
-}
-
-@media only screen and (max-width:767px) {
-    #bg {}
-}
-
-@media only screen and (min-width:768px) {
-    #bg {}
 }
 
 @media only screen and (min-width:992px) {
@@ -433,14 +405,6 @@ header {
     }
 }
 
-@media only screen and (min-width:768px) {
-    .portfolio_pt img {}
-}
-
-@media only screen and (min-width:992px) {
-    .portfolio_pt img {}
-}
-
 .portfolio_pt {
     width: 50%;
     padding: 0 70px;
@@ -457,14 +421,6 @@ header {
         justify-items: center;
         margin: 20px auto;
     }
-}
-
-@media only screen and (min-width:768px) {
-    .portfolio_pt {}
-}
-
-@media only screen and (min-width:992px) {
-    .portfolio_pt {}
 }
 
 figcaption {
@@ -496,15 +452,6 @@ figcaption {
         text-align: left;
         font-size: 1.5rem;
     }
-    .portfolio_pt span {}
-}
-
-@media only screen and (min-width:768px) {
-    .portfolio_pt h2 {}
-}
-
-@media only screen and (min-width:992px) {
-    .portfolio_pt h2 {}
 }
 
 
